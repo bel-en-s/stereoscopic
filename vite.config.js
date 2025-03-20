@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/stereoscopic/', // Debe coincidir con tu repositorio
+  base: "/stereoscopic/", // Cambia esto si el nombre del repo es diferente
+  build: {
+    outDir: "dist"
+  }
 });
