@@ -11,8 +11,8 @@ let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 
 const glbModels = [
-    '/assets/cara.glb',
-    '/assets/vidriera1.glb',
+    './assets/cara.glb',
+    './assets/vidriera1.glb',
 ];
 
 let currentModelIndex = 0;
@@ -29,7 +29,7 @@ export function init() {
     const textureLoader = new THREE.TextureLoader();
 
     // Textura de fondo
-    scene.background = textureLoader.load('/assets/water.jpeg');
+    scene.background = textureLoader.load('./assets/water.jpeg');
 
     // Luces
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
@@ -79,9 +79,9 @@ export function init() {
 // Función para crear objetos aleatorios
 function createObjects(textureLoader) {
     const texturePaths = [
-        '/assets/bg.jpeg',
-        '/assets/yellow.jpeg',
-        '/assets/black.jpeg',
+        './assets/bg.jpeg',
+        './assets/yellow.jpeg',
+        './assets/black.jpeg',
 
     ];
 
@@ -118,7 +118,7 @@ function createObjects(textureLoader) {
 
 // Función para crear partículas (estrellas)
 function createParticles(textureLoader) {
-    const particleTexture = textureLoader.load('/assets/star.png');
+    const particleTexture = textureLoader.load('./assets/star.png');
 
     const particlesGeometry = new THREE.BufferGeometry();
     const positions = [];
