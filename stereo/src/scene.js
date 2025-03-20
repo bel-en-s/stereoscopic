@@ -10,7 +10,6 @@ let mouseX = 0, mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 
-// Almacenar rutas de modelos GLB
 const glbModels = [
     '/assets/cara.glb',
     '/assets/vidriera1.glb',
@@ -23,14 +22,14 @@ export function init() {
     scene = new THREE.Scene();
 
     // Cámara
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10);
     camera.position.z = 5;
 
     // Cargador de texturas
     const textureLoader = new THREE.TextureLoader();
 
     // Textura de fondo
-    scene.background = textureLoader.load('/assets/1.jpg');
+    scene.background = textureLoader.load('/assets/water.jpeg');
 
     // Luces
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
@@ -80,12 +79,10 @@ export function init() {
 // Función para crear objetos aleatorios
 function createObjects(textureLoader) {
     const texturePaths = [
-        '/assets/2.jpeg',
-        '/assets/3.jpeg',
-        '/assets/2.jpeg',
-        '/assets/3.jpeg',
-        '/assets/2.jpeg',
-        '/assets/3.jpeg',
+        '/assets/bg.jpeg',
+        '/assets/yellow.jpeg',
+        '/assets/black.jpeg',
+
     ];
 
     for (let i = 0; i < 10; i++) {
